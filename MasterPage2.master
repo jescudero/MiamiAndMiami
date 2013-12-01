@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+
+<html >
+<head id="Head1" runat="server">
+<title>Miami & Miami</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" /> 
+<link rel="stylesheet" type="text/css" href="css/widgets.css" media="all" /> 
+
+<script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="js/jquery.infinite-carousel.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    var j = jQuery.noConflict();
+
+</script>
+<script type="text/javascript" src="highslide/highslide-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+
+<!--
+    2) Optionally override the settings defined at the top
+    of the highslide.js file. The parameter hs.graphicsDir is important!
+-->
+
+<script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'glossy-dark';
+    hs.align = 'center';
+    hs.transitions = ['expand', 'crossfade'];
+    hs.wrapperClassName = 'dark';
+    hs.fadeInOut = true;
+
+</script>
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body class="cms-index-index cms-home">
+ <form id="form1" runat="server">
+<div class="wrapper">
+  <div class="page">
+
+        <div class="header-container">
+
+    <div class="header">
+
+                <h1 class="logo"><strong>Miami & Miami</strong><a href="http://www.miamiandmiami.com/" title="Miami & Miami"><img src="images/logo.png" alt="Miami & Miami" /></a></h1>
+
+                <div class="quick-access">
+
+            <p class="welcome-msg"><span>Welcome to our Site!</span></p>
+
+           <ul class="links"> 
+                        <li class="first" ><asp:LinkButton ID="LinkButton1" runat="server" 
+                                onclick="LinkButton1_Click" >My Account</asp:LinkButton></li> 
+                                 <li ><asp:LinkButton ID="LnkPassword" runat="server" Visible="false" PostBackUrl="~/ChangePassword.aspx" >Change Password</asp:LinkButton></li> 
+                        <li id="reg" runat="server" ><a href="Register.aspx" title="Register" >Register</a></li> 
+                        <li class="last" ><asp:LinkButton ID="LnkLogin" runat="server" 
+                                onclick="LnkLogin_Click">Log In</asp:LinkButton></li> 
+            </ul> 
+        </div>
+
+    </div>
+
+</div>
+
+<div class="nav-container">
+     <a href="Default.aspx" class="home_link"></a>
+    
+    <ul id="nav">
+      
+            <li><a href="ListingHotel" class="level-top"> <span>VACATION RENTALS</span> </a> </li>
+          <li><a href="ListingPackage"   class="level-top"> <span>DEALS</span> </a>          </li>
+         <li><a href="MiamiBeachRestaurants" class="level-top"> <span>RESTAURANTS</span> </a> </li>
+        <!--
+        <li> <a href="Events" class="level-top"> <span>Events</span> </a> </li>
+           <li> <a href="MiamiShopping" class="level-top"> <span>SHOPPING</span></a> </li>
+        <li> <a href="FunandLeisure" class="level-top"> <span>Fun & Leisure </span> </a> </li>-->
+     <li> <a href="blog/"  class="level-top" target="_blank" > <span>Blog</span> </a> </li>
+        
+    </ul>
+<div class="home_linkRight"></div>
+    
+
+</div>
+
+        <div class="main-container col2-right-layout">
+            <div class="main">
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+        </div>
+
+        <div class="footer-container">
+
+    <div class="footer">
+
+                          <ul class="links">
+
+                <li class="first"><a href="Aboutus" title="About Us">About Us</a></li>
+                <li><a href="SiteMap" title="Site Map">Site Map</a></li> 
+                <li ><a href="FAQ" title="FAQ">FAQ</a></li> 
+                <li><a href="TermsAndConditions" title="Terms and Conditions">Terms and Conditions</a></li>
+                <li class="last" ><a href="Testimonials" title="Testimonials">Testimonials </a></li>
+                <li ><a href="ContactUs" title="Contact Us">Contact Us </a></li> 
+                <li ><a href="HotelsPartner" title="Hotels Partner in Italy">Hotels Partner in Italy</a></li> 
+                <li ><a href="Birds" title="Bird's Nest vacation apartments">Bird's Nest vacation apartments</a></li> 
+         
+            </ul> 
+        <div class="clear"></div>
+
+        <address>&copy;Copyright 2012 Miami & Miami All rights reserved</address>
+
+        <div id="facbooklink"><a href="#"><img src="images/icon-1.png" /></a>&nbsp;<a href="#"><img src="images/icon-2.png" /></a></div>
+    </div>
+
+</div>
+
+  </div>
+
+</div>
+  </form>
+</body>
+
+</html>

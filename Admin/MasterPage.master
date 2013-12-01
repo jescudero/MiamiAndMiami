@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs"  Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Miami & Miami</title>
+
+<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" /> 
+<link rel="stylesheet" type="text/css" href="../css/widgets.css" media="all" /> 
+
+<script type="text/javascript" src="../js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="../js/jquery.infinite-carousel.js"></script>
+<script type="text/javascript" src="../js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+var j = jQuery.noConflict();
+
+</script>
+
+<script type="text/javascript" src="../js/prototype.js"></script> 
+<script type="text/javascript" src="../js/menu.js"></script> 
+
+
+
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body class="cms-index-index cms-home">
+ <form id="form1" runat="server">
+<div class="wrapper">
+  <div class="page">
+
+        <div class="header-container">
+
+    <div class="header">
+
+                <h1 class="logo"><strong>Miami & Miami</strong><a href="http://www.miamiandmiami.com/" target="_blank"  title="Miami & Miami"><img src="../images/logo.png" alt="Miami & Miami" /></a></h1>
+
+                <div class="quick-access">
+
+            <p class="welcome-msg"><span>Welcome to our Admin!</span></p>
+
+            <ul class="links"> 
+                        <li class="first" ><a href="ChangePassword.aspx" title="Change Password">Change Password</a></li> 
+                        <li class="last" ><asp:LinkButton ID="LnkLogin" runat="server"  onclick="LnkLogin_Click">Log Out</asp:LinkButton></li> 
+            </ul> 
+        </div>
+
+    </div>
+
+</div>
+
+<div class="nav-container">
+    <a href="../Default.aspx" class="home_link"></a>
+    
+    <ul id="nav">
+      
+      
+        <li><a href="#" class="level-top"> <span>Static Pages</span> </a> 
+            <ul class="level0"> 
+             <li class="level1 nav-3-1 first"> <a href="Indexpage.aspx?page=Aboutus"> <span>About Us</span> </a> </li>
+            <li class="level1 nav-3-2 "> <a href="Indexpage.aspx?page=Events"> <span>Events</span> </a> </li>
+            <li class="level1 nav-3-3"> <a href="Indexpage.aspx?page=FunandLeisure"> <span>Fun & Leisure</span> </a> </li>
+            <li class="level1 nav-3-4"> <a href="Indexpage.aspx?page=HotelsPartner"> <span>Hotels Partner</span> </a> </li>
+            <li class="level1 nav-3-5"> <a href="Indexpage.aspx?page=MiamiBeachRestaurants"> <span>Miami Beach Restaurants</span> </a> </li>
+            <li class="level1 nav-3-6"> <a href="Indexpage.aspx?page=MiamiShopping" > <span>Miami Shopping</span> </a> </li>
+            <li class="level1 nav-3-7"> <a href="Indexpage.aspx?page=VacationRentals"> <span>Vacation Rentals</span> </a> </li> 
+            <li class="level1 nav-3-8"> <a href="Indexpage.aspx?page=MiamiSale"> <span>Miami Sale</span> </a> </li> 
+            <li class="level1 nav-3-9"> <a href="Indexpage.aspx?page=VisitMiami"> <span>Visit Miami</span> </a> </li> 
+            <li class="level1 nav-3-10"> <a href="Indexpage.aspx?page=News"> <span>News</span> </a> </li>
+            <li class="level1 nav-3-11"> <a href="Indexpage.aspx?page=TermsAndConditions"> <span>Terms and Conditions</span> </a> </li>
+            <li class="level1 nav-3-12"> <a href="Indexpage.aspx?page=ContactUs"> <span>Contacts</span> </a> </li> 
+            <li class="level1 nav-3-13"> <a href="Indexpage.aspx?page=FAQ"> <span>FAQ</span> </a> </li>
+            <li class="level1 nav-3-14 "> <a href="Indexpage.aspx?page=SiteMap"> <span>Site Map</span> </a> </li>
+            <li class="level1 nav-3-15 last"> <a href="Indexpage.aspx?page=Birds"> <span>Bird's Nest vacation apartments</span> </a> </li>
+
+            </ul>
+        </li>
+          <li><a href="Members.aspx"  class="level-top"> <span>Members</span> </a> </li>
+          <li><a href="Hotels.aspx" class="level-top"> <span>Hotels</span> </a> </li>
+          <li> <a href="Packages.aspx" class="level-top"> <span>Packages</span> </a> </li>
+          <li><a href="Enquiries.aspx"  class="level-top"> <span>Enquiries</span> </a> </li>
+          <li><a href="HotelReviews.aspx"   class="level-top"> <span>Reviews</span> </a> </li>
+          <li><a href="Testimonials.aspx"   class="level-top"> <span>Testimonials</span> </a> </li>
+          <li><a href="NewsletterSubsribers.aspx" class="level-top"> <span>Newsletters</span> </a> </li>
+          <li><a href="Bookings.aspx"  class="level-top"> <span>Booking</span> </a> </li>
+        
+    </ul>
+<div class="home_linkRight"></div>
+    
+
+</div>
+
+        <div class="main-container col2-right-layout">
+            <div class="main">
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+        </div>
+
+        <div class="footer-container">
+
+    <div class="footer">
+
+          
+
+        <address>&copy;Copyright 2012 Miami & Miami All rights reserved</address>
+
+        <div id="facbooklink"><a href="#"><img src="../images/icon-1.png" /></a>&nbsp;<a href="#"><img src="../images/icon-2.png" /></a></div>
+    </div>
+
+</div>
+
+  </div>
+
+</div>
+  </form>
+</body>
+
+</html>

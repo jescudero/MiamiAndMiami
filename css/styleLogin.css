@@ -1,0 +1,317 @@
+/* -----------------------------------------------------------
+	main stylesheet
+----------------------------------------------------------- */
+html
+{
+    height: 80%;  
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+    height: 80%;
+	background: #fff ;
+	font-family: Lucida Grande, Verdana, Lucida Sans Regular, Lucida Sans Unicode, Arial, sans-serif;
+	font-size: 11px;
+}
+
+/* -----------------------------------------------------------
+	images
+----------------------------------------------------------- */ 
+
+
+
+/* -----------------------------------------------------------
+	headings
+----------------------------------------------------------- */ 
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #292929;
+    font-weight: bold;
+}
+
+h1
+{
+    font-size: 22px;
+}
+
+h2
+{
+    font-size: 20px;
+}
+
+h3
+{
+    font-size: 18px;  
+}
+
+h4
+{
+    font-size: 16px;
+}
+
+h5
+{
+    font-size: 14px; 
+}
+
+h6
+{
+    font-size: 11px; 
+}
+
+
+/* -----------------------------------------------------------
+	login
+----------------------------------------------------------- */
+
+#login
+{
+	
+    margin: auto;
+    padding: 0;
+	width: 420px;
+	height: 250px;
+	margin-top:50px;
+}
+
+/* -----------------------------------------------------------
+	login -> colors
+----------------------------------------------------------- */ 
+
+#login div.color
+{
+    left: auto;
+    right: auto;
+    margin: 10px auto 0 auto;
+    padding: 3px 3px 3px 0;
+	clear: both;
+	overflow: hidden;
+    background: #FFFFFF;
+}
+
+#login div.color a
+{
+    margin: 0 0 0 3px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+}
+
+/* -----------------------------------------------------------
+	login -> title
+----------------------------------------------------------- */ 
+
+#login div.title
+{
+	margin: 0 auto;
+	padding: 0;
+	width: 392px;
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	background-color: #FDB004;
+	background:url(../images/search-bg.gif) repeat-x;  
+}
+.btn-blue{background:#224472;  color:#ffffff;	 border: 1px solid #FFF; border-radius: 5px 5px 5px 5px;  padding:7px; font:bold 11px Verdana;  cursor:pointer; margin-top:20px;}
+#login div.title h5
+{
+	margin: 10px;
+	padding: 0;
+	color: #ffffff;	
+}
+
+/* -----------------------------------------------------------
+	login -> title / corners
+----------------------------------------------------------- */ 
+
+#login div.title div.corner
+{
+	height: 7px;
+	width: 10px;
+	position: absolute;
+	background: url("../../resources/images/colors/blue/login_corners.png") no-repeat;
+}
+
+#login div.title div.tl
+{
+	top: 0;
+	left: -1px;
+    background-position: 0 0;
+}
+
+#login div.title div.tr
+{
+	top: 0;
+	right: 0;
+    background-position: -6px 0;
+}
+
+#login div.inner
+{
+	border-radius: 5px 5px 5px 5px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 348px;
+	border:solid 2px #224472;
+    height: 200px;
+}
+
+/* -----------------------------------------------------------
+	login -> form
+----------------------------------------------------------- */
+
+#login div.form
+{
+    margin: 0;
+    padding: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+#login div.form div.fields
+{
+	margin: 0;
+	padding: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+#login div.form div.fields div.field
+{
+	margin: 0;
+	padding: 0 0 10px 0; 
+	clear: both;
+	overflow: hidden;
+	height: 20px;
+	width: 357px;
+}
+
+#login div.form div.fields div.field span.error
+{
+	margin: 8px 0 0 0;
+	padding: 0;
+	height: 1%;
+	display: block;
+	color: #FF0000;
+}
+
+#login div.form div.fields div.field label.error
+{
+	margin: 8px 0 0 0;
+	padding: 0;
+	height: 1%;
+	display: block;
+	color: #FF0000;
+}
+
+#login div.form div.fields div.field div.label
+{
+	margin: 2px 10px 0 0;
+	padding: 5px 0 0 5px;
+	width: 120px;
+	float: left;
+    text-align: right;
+}
+
+#login div.form div.fields div.field div.label label
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+#login  div.form div.fields div.field div.label span
+{
+	margin: 0;
+	padding: 2px 0 0 0;
+	height: 1%;
+	display: block;
+	color: #363636;
+}
+
+#login div.form div.fields div.field div.input
+{
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#login div.form div.fields div.field div.input input
+{
+    margin: 0;
+    padding: 4px 7px 4px 7px;
+    width: 176px;
+    background: #FFFFFF;
+    border-top: 1px solid #b3b3b3;
+    border-left: 1px solid #b3b3b3;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    color: #000000;
+	font-family: Lucida Grande, Verdana, Lucida Sans Regular, Lucida Sans Unicode, Arial, sans-serif;
+	font-size: 11px;
+}
+
+#login div.form div.fields div.field div.input  input.error
+{
+	background: #FBE3E4;
+	border-top: 1px solid #e1b2b3;
+	border-left: 1px solid #e1b2b3;
+	border-right: 1px solid #FBC2C4;
+	border-bottom: 1px solid #FBC2C4;
+}
+
+#login div.form div.fields div.field div.input  input.success
+{
+	background: #E6EFC2;
+	border-top: 1px solid #cebb98;
+	border-left: 1px solid #cebb98;
+	border-right: 1px solid #c6d880;
+	border-bottom: 1px solid #c6d880;
+}
+
+#login div.form div.fields div.field div.input div.link
+{
+	margin: 6px 0 0 0;
+	padding: 0;
+	text-align: right;
+}
+
+#login div.form div.fields div.field div.checkbox
+{
+	margin: 0 0 0 132px;
+	padding: 0;
+	vertical-align :top ;
+}
+
+#login div.form div.fields div.field div.checkbox label
+{
+    color: #565656;
+    font-weight: bold;
+    vertical-align :top ;
+}
+
+#login div.form div.fields div.buttons
+{
+	margin: 0;
+	padding-left:132px; 
+	clear: both;
+	overflow: hidden;
+	
+}
+
+#login div.form div.fields div.buttons input
+{
+	margin: 0;
+  
+	font-size: 1.0em; 
+    font-weight: bold;
+	font-family: Verdana, Helvetica, Sans-Serif; 
+}
+.btn-blue{background:#224472;  color:#ffffff;font-weight: bold;	 border: 1px solid #FFF; border-radius: 5px 5px 5px 5px;  padding:7px; font:bold 11px Verdana;  cursor:pointer; margin-top:20px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}
+
+
+

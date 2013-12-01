@@ -1,0 +1,84 @@
+﻿.main-table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E1D9E7;
+}
+
+
+/*Grid Css*/
+.GridStyle
+{
+	background-color:#ffffff;
+	border:#ACC1D4 solid 1px;
+
+	color:#000000;
+	width :100%;
+}
+
+.GridHeaderStyle td,.GridHeaderStyle th
+{
+	border-bottom: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    font-weight: bold;
+    height:25px;
+    padding-left:5px;
+    padding-top:5px;
+    padding-right:5px;
+    padding-bottom:5px;
+    color:#FFF;
+    background-color:#446795;
+	
+}
+
+
+
+
+.GridRowStyle td
+{
+	background-color :#ffffff;
+	border-bottom: 1px solid #224472;
+    border-right: 1px solid #224472;
+	height:25px;
+	color:#000000;
+	padding-left:5px;
+    padding-right:5px;
+    vertical-align:middle;
+    
+    
+}
+
+
+
+.GridSelectedRowStyle
+{
+	background-color:#446795;
+    color:#FFF;
+    border-bottom-color :#ACC1D4;
+    border-bottom-style  :solid;
+	border-bottom-width  :1px;
+	
+}
+
+.GridPagerStyle
+{
+	background-color :#446795;
+	/*background-color:#508CCB;*/
+	color:#FFF;
+	text-align :center ;
+	padding-left:10px;
+}
+
+.GridFooterStyle
+{
+	background-color :#446795;
+	color:#FFF;
+	height:25px; 
+	padding-left:10px;
+}
+.GridAmountAlignment
+{
+	text-align:right;
+	padding-right:10px;
+	
+}
+
+

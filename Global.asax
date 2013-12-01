@@ -1,0 +1,1 @@
+﻿<%@ Application Inherits="TestCacheTimeout.Global" Language="C#" %>

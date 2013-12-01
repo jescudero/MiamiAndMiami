@@ -1,0 +1,102 @@
+	body{
+		background-image:url('../../images/heading3.gif');
+		background-repeat:no-repeat;
+		padding-top:0px;
+	}
+	#dhtmlgoodies_slideshow{
+		width:520px;	/* Total width of slideshow */
+
+
+	}
+	
+	#previewPane{
+		border:1px solid #CCCCCC;
+		margin-bottom:10px;	
+		text-align:center;
+		vertical-align:middle;
+		padding-top:0px;
+
+		position:relative;
+		
+		/* CSS HACK */
+		height: 260px;	/* IE 5.x */
+		height/* */:/**/255px;	/* Other browsers */
+		height: /**/255px;
+				
+	}
+	#previewPane img{
+		line-height:400px;margin :5px;border:2px solid #224467;padding:2px;width:500px;height:240px;
+	}
+	#previewPane #largeImageCaption{	/* CSS styling of image caption below large image */
+		font-style:italic;
+		text-align:center;
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;	/* Font to use */
+		font-size:0.9em;
+	}
+	#ctl00_ContentPlaceHolder1_galleryContainer{
+		
+		height:80px;	/* Height of the images + 2 */
+		border:1px solid #CCCCCC;
+		position:relative;
+		overflow:hidden;
+		padding:1px;
+		
+		/* CSS HACK */
+		height: 84px;	/* IE 5.x - Added 2 pixels for border left and right */
+		height/* */:/**/80px;	/* Other browsers */
+		height: /**/80px;
+				
+	}
+	#arrow_left{
+		position:absolute;
+		left:0px;
+		z-index:10;
+		background-color: #FFF;
+		padding:1px;
+		height:80px;
+	}
+	#arrow_right{
+		position:absolute;
+		right:0px;
+		z-index:10;
+		background-color: #FFF;
+		padding:1px;	
+		height:80px;	
+	}
+	#ctl00_ContentPlaceHolder1_theImages{
+		position:absolute;
+		height:50px;
+		left:40px;
+		width:100000px;
+		
+	}
+	#ctl00_ContentPlaceHolder1_theImages #slideEnd{
+		float:left;
+	}
+	#ctl00_ContentPlaceHolder1_theImages img{
+		float:left;
+		padding:2px;
+		filter: alpha(opacity=50);
+		opacity: 0.5;
+		cursor:pointer;
+		border:0px;
+		width:80px;
+		height:70px;
+	}
+
+	#waitMessage{
+		display:none;
+		position:absolute;
+		left:200px;
+		top:150px;
+		background-color:#FFF;
+		border:3px double #000;
+		padding:4px;
+		color:#555;
+		font-size:0.9em;
+		font-family:arial;	
+	}
+	
+	#ctl00_ContentPlaceHolder1_theImages .imageCaption{
+		display:none;
+	}
