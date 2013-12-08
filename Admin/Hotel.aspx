@@ -540,11 +540,11 @@
   </div>
    <div style="border-radius: 5px 5px 5px 5px;  margin: 0 auto; padding:10px;   border:solid 1px #000;">
   <p  style="padding-left:20px;padding-bottom:15px; font-size:16px;color:#224474; font-weight:bold; "> Hotel Facilities </p>
-       <asp:CheckBoxList ID="ChkFacilities" runat="server"></asp:CheckBoxList>
+       <asp:CheckBoxList ID="ChkFacilities" runat="server" RepeatColumns="3"></asp:CheckBoxList>
   </div>
   <div style="border-radius: 5px 5px 5px 5px;  margin: 0 auto; padding:10px;   border:solid 1px #000;">
   <p  style="padding-left:20px;padding-bottom:15px; font-size:16px;color:#224474; font-weight:bold; "> Hotel Activities </p>
-        <asp:CheckBoxList ID="ChkActivities" runat="server"></asp:CheckBoxList>
+        <asp:CheckBoxList ID="ChkActivities" runat="server" RepeatColumns="3"></asp:CheckBoxList>
   </div>
 
   </div>

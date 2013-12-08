@@ -58,7 +58,10 @@ public partial class Hotel : System.Web.UI.Page
         MySqlDataReader dr = cmd.ExecuteReader();
         while (dr.Read())
         {
-            ChkActivities.Items.Add(new ListItem(dr["Description"].ToString(), dr["ActivityKey"].ToString()));
+            ListItem li = new ListItem(dr["Description"].ToString(), dr["ActivityKey"].ToString());
+            li.Attributes.Add("Style", "width:200px;display:block");
+
+            ChkActivities.Items.Add(li);
             ;
         }
         dr.Close();
@@ -68,7 +71,10 @@ public partial class Hotel : System.Web.UI.Page
         dr = cmd.ExecuteReader();
         while (dr.Read())
         {
-            ChkFacilities.Items.Add(new ListItem(dr["Description"].ToString(), dr["FacilitiesKey"].ToString()));
+            ListItem li = new ListItem(dr["Description"].ToString(), dr["FacilitiesKey"].ToString());
+            li.Attributes.Add("Style", "width:200px;display:block");
+
+            ChkFacilities.Items.Add(li);
             ;
         }
         dr.Close();

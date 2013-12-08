@@ -667,6 +667,12 @@ border-bottom-left-radius: 10px 10px;
 	text-align:center;
 }
 
+.HotelActivities li
+{
+display: inline !important; 
+list-style-type: none;
+padding-right: 140px !important;
+}
 
 .HotelVideo
 {

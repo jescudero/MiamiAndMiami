@@ -93,18 +93,12 @@ public partial class HotelDetail : System.Web.UI.Page
                 HotelVideo.Visible = false;
             }
 
-            //Map
-            string street = "";
-            string mapKey = ConfigurationManager.AppSettings["googlemaps.subgurim.net"];
-            street = dr["Address"].ToString() + ", " + dr["City"].ToString() + ", " + dr["State"].ToString() + ", " + dr["Country"].ToString();
-            var GeoCode = Subgurim.Controles.GMap.geoCodeRequest(street, mapKey);
-            var gLatLng = new Subgurim.Controles.GLatLng(GeoCode.Placemark.coordinates.lat, GeoCode.Placemark.coordinates.lng);
+            hdfAddress.Value = dr["Address"].ToString() + "," + dr["City"].ToString() + "," + dr["State"].ToString() + "," + dr["Country"].ToString();
 
-            GMap1.setCenter(gLatLng, 16, Subgurim.Controles.GMapType.GTypes.Normal);
-            Subgurim.Controles.GMarker oMarker = new Subgurim.Controles.GMarker(gLatLng);
-          
-            var window = new Subgurim.Controles.GInfoWindow(oMarker, "<b>" + dr["HotelName"].ToString() + "</b>" , true, new Subgurim.Controles.GInfoWindowOptions(0, 200));
-            GMap1.Add(window);
+            hdfHotelAddress.Value = dr["Address"].ToString();
+
+            hdfHotelName.Value = dr["HotelName"].ToString();
+
 
             if ((dr["PriceTo"].ToString() != "") && (dr["PriceFrom"].ToString() != ""))
             {
@@ -141,7 +135,7 @@ public partial class HotelDetail : System.Web.UI.Page
         da.Fill(dt);
         if (dt.Rows.Count > 0)
         {
-            Activities.InnerHtml = "<ul>";
+            Activities.InnerHtml = "<ul class=\"HotelActivities\">";
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string str2 = dt.Rows[i]["description"].ToString();
@@ -163,7 +157,7 @@ public partial class HotelDetail : System.Web.UI.Page
         da.Fill(dt);
         if (dt.Rows.Count > 0)
         {
-            Facilities.InnerHtml = "<ul>";
+            Facilities.InnerHtml = "<ul class=\"HotelActivities\">";
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string str2 = dt.Rows[i]["description"].ToString();

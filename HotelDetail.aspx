@@ -1,36 +1,56 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage2.master" AutoEventWireup="true" CodeFile="HotelDetail.aspx.cs" Inherits="HotelDetail" Title="Hotel Detail" %>
 
-<%@ Register Assembly="GMaps" Namespace="Subgurim.Controles" TagPrefix="cc1" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-	
-	  	<script type="text/javascript" src="lib/jquery-1.8.2.min.js"></script>
-
-	
-	<!-- Add fancyBox main JS and CSS files -->
-	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.3"></script>
-	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.2" media="screen" />
-    <link rel="stylesheet" href="css/image-slideshow.css" type="text/css"/>
-	<script type="text/javascript" src="js/image-slideshow.js">
-	  
- 
-	
-	</script>
-	
-
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+	<link rel="stylesheet" href="css/image-slideshow.css" type="text/css"/>
+	<script type="text/javascript" src="js/image-slideshow.js">	</script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript">
+	    function init_map(map_canvas_id, zoomLevel) {
+
+	        var myLatLng;
+	        debugger;
+	        var address = $('#ctl00_ContentPlaceHolder1_hdfAddress').val(); 
+	        var geo = new google.maps.Geocoder;
+
+	        geo.geocode({ 'address': address }, function (results, status) {
+	            if (status == google.maps.GeocoderStatus.OK) {
+	                myLatLng = results[0].geometry.location;
+
+	                var options = {
+	                    zoom: zoomLevel,
+	                    center: myLatLng,
+	                    mapTypeId: google.maps.MapTypeId.TERRAIN
+	                };
+
+	                var map_canvas = document.getElementById(map_canvas_id);
+
+	                var map = new google.maps.Map(map_canvas, options);
+                    
+	                var marker = new google.maps.Marker({ title: "Hotel", position: myLatLng });
+	                marker.setMap(map);
+
+	                var hotelName = $('#ctl00_ContentPlaceHolder1_hdfHotelName').val();
+	                var hotelAddress = $('#ctl00_ContentPlaceHolder1_hdfHotelAddress').val();
+
+	                var info = new google.maps.InfoWindow({
+	                    content: "<div><b>" + hotelName + "</b><br>" + hotelAddress + "</div>"
+	                });
+
+	                info.open(map, marker);
+
+	            } else {
+	                alert("Geocode was not successful for the following reason: " + status);
+	            }
+
+	        });
+
+	    }
+
 		$(document).ready(function() {
-			/*
-			 *  Simple image gallery. Uses default settings
-			 */
-
-			$('.fancybox').fancybox();
-
-			/*
-			 *  Different effects
-			 */
-
-			
+	        
+			init_map('my_map', 17);
 
 		});
 	</script>
@@ -40,8 +60,7 @@
 		}
 		
 	</style>
-
-			<script type="text/javascript" src="highslide/highslide-full.js"></script>
+	<script type="text/javascript" src="highslide/highslide-full.js"></script>
 	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
 
 <!--
@@ -86,11 +105,13 @@ hs.fadeInOut = true;
         }
         //document.getElementById("loading").style.display='block';
     }
+
+    
 </script>
 
  <link rel="stylesheet" type="text/css" media="screen" href="calendar/tcal.css" />
 
-	<script type="text/javascript" src="calendar/tcal.js"></script>
+<script type="text/javascript" src="calendar/tcal.js"></script>
 	
 
 </asp:Content>
@@ -114,6 +135,11 @@ hs.fadeInOut = true;
   
   <div style="margin-top :10px;text-align:left;padding-left:0px;min-height:350px;" >
   
+  <asp:HiddenField ID="hdfAddress" runat="server" />
+  <asp:HiddenField ID="hdfHotelAddress" runat="server" />
+  <asp:HiddenField ID="hdfHotelName" runat="server" />
+      
+
  <div class="HotelSortDesc" id="gallery">
  <div id="dhtmlgoodies_slideshow" class="HotelTopLeft">
 	<div id="previewPane">
@@ -161,12 +187,10 @@ hs.fadeInOut = true;
   
     </div>
      <div id="featurelist1" class="hoteloverview" runat="server" >
-       <div id="featurelist" class="subtitle" style="padding-left:0px;"><h2>Facilities</h2></div>
-     <p id="Facilities" runat ="server">
-		
-	</p>
-  
-    </div>
+    <div id="featurelist" class="subtitle" style="padding-left:0px;"><h2>Facilities</h2></div>
+     <p id="Facilities" runat ="server"></p>
+    </div>		  
+    
      <div id="Activitieslist1" class="hoteloverview" runat="server" >
        <div id="activitieslist" class="subtitle" style="padding-left:0px;"><h2>Activities</h2></div>
      <p id="Activities" runat ="server">
@@ -183,9 +207,9 @@ hs.fadeInOut = true;
 
   </div> 
     </div>
-     <div id="map"> 
-        <cc1:GMap ID="GMap1" runat="server" Width="100%" /> 
-         <br />
+    <div class="hoteloverview">
+     <div id="my_map"style="width:100%;height:300px"> 
+    </div>
     </div>
 
     <div id="video"></div>

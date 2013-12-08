@@ -86,6 +86,12 @@
                                   <tbody>
                                 
                                     <tr valign="bottom">
+                                      <td valign="top" >&nbsp;</td>
+                                      <td valign="top"> &nbsp;</td>
+                                 
+                                    </tr>
+                                
+                                    <tr valign="bottom">
                                       <td valign="top" >Name *</td>
                                       <td valign="top"> <asp:TextBox ID="TxtName" runat="server" MaxLength="50" Width="220px"></asp:TextBox></td>
                                  
