@@ -105,7 +105,7 @@
                   </div>
                 <div class="actions">
                      <a type="button" title="View Details" class="button btn-cart" onclick="setLocation('')"><span><span>View Details</span></span></a>
-                      <a class="button" href=""><span><span>Book now</span></span> </a>
+                      <!--<a class="button" href=""><span><span>Book now</span></span> </a>-->
                       <a class="button" href=""><span><span>Enquiry</span></span></a>
                 </div>
             </li>

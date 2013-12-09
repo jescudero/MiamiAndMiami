@@ -417,7 +417,7 @@ p.control input.radio { margin-right:6px; }
 .footer { background:url(../images/footer.png) no-repeat; padding :29px 0 20px 22px; }
 .footer p { text-align:right; }
 .footer address { display:block; padding:12px 0 0 0; color:#A2A3A3; width:700px;float:left; }
-.footer ul.links { float:none; width:850px; margin:0 auto; }
+.footer ul.links { float:none; width:890px; margin:0 auto; }
 .footer ul { float:left; }
 .footer ul li { float:left; font-size:12px; font-weight:bold; padding:0 16px 0 0; }
 .footer ul li a { text-decoration:none; color:#013E55; }

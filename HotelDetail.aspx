@@ -174,8 +174,9 @@ hs.fadeInOut = true;
 <%--    <a style="float:right;" id="Review" runat="server"   class="button" onclick="return hs.htmlExpand(this, { objectType: 'iframe'  })">Write A Review</a>
 --%> 
 <div class="Favorite" id="Fav" runat="server" ></div> 
+    <a style="float:right;" id="Reviews"  class="button2" href="#reviewlist">Reviews</a>
+    <a style="float:right;" id="Enquire"  class="button2" href="#reservation-enquiry">Enquire Now</a>
     <a style="float:right;" id="Review" runat="server"   class="button2" onclick="return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 510 } )">Write A Review</a>
-
   </div>
   </div>
  
@@ -207,15 +208,13 @@ hs.fadeInOut = true;
 
   </div> 
     </div>
-    <div class="hoteloverview">
+    <div class="hoteloverview" id="#map">
      <div id="my_map"style="width:100%;height:300px"> 
     </div>
     </div>
 
     <div id="video"></div>
     <div class="HotelVideo" id="HotelVideo" runat="server" >
-    
-  
     </div>
     <div class="HotelGallery" id="HotelReview" runat="server" >
     <div id="reviewlist" class="subtitle" style="padding-left:0px;"><h2>Reviews</h2></div>

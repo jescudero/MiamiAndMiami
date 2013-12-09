@@ -50,12 +50,13 @@
 
     <div class="header">
 
-                <h1 class="logo"><strong>Miami & Miami</strong><a href="http://www.miamiandmiami.com/" title="Miami & Miami"><img src="images/logo.png" alt="Miami & Miami" /></a></h1>
+    <h1 class="logo"><strong>Miami & Miami</strong><a href="http://www.miamiandmiami.com/" title="Miami & Miami"><img src="images/logo.png" alt="Miami & Miami" /></a></h1>
 
-                <div class="quick-access">
+    <div class="quick-access">
 
-            <p class="welcome-msg"><span>Welcome to our Site!</span></p>
+    <p class="welcome-msg"><span>Welcome to our Site!</span></p>
 
+        <!--
            <ul class="links"> 
                         <li class="first" ><asp:LinkButton ID="LinkButton1" runat="server" 
                                 onclick="LinkButton1_Click" >My Account</asp:LinkButton></li> 
@@ -63,7 +64,7 @@
                         <li id="reg" runat="server" ><a href="Register.aspx" title="Register" >Register</a></li> 
                         <li class="last" ><asp:LinkButton ID="LnkLogin" runat="server" 
                                 onclick="LnkLogin_Click">Log In</asp:LinkButton></li> 
-            </ul> 
+            </ul> -->
         </div>
 
     </div>

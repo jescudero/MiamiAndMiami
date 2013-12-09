@@ -214,9 +214,7 @@ public partial class HotelDetail : System.Web.UI.Page
 
            for (int i = 0; i < dt1.Rows.Count; i++)
            {
-
                DivContant = DivContant + "<li class=\"item\"><div style=\"height:28px;\"><div class=\"y-name\">" + dt1.Rows[i]["YName"].ToString() + " (" + dt1.Rows[i]["Email"].ToString() + ")</div><div class=\"review\"> Date : " + Convert.ToDateTime(dt1.Rows[i]["ReviewDate"]).ToString("dd-MMMM-yyyy") + "</div></div> <div class=\"desc\">" + dt1.Rows[i]["Comment"].ToString() + "</div></li>";
-
            }
            HotelReview.Visible = true;
        }

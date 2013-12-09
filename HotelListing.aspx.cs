@@ -101,7 +101,7 @@ public partial class HotelListing : System.Web.UI.Page
                 }
             }
             HotelListContaint = HotelListContaint + "<div class=\"actions\"><a type=\"button\" title=\"View Details\" class=\"button btn-cart\" href=\"HotelDetail.aspx?HotelID=" + dt.Rows[i]["HotelKey"].ToString() + "\"><span><span>View Details</span></span></a>" +
-                "<a class=\"button\" href=\"OnlineReservation.aspx?Type=Hotel&ID=" + dt.Rows[i]["HotelKey"].ToString() + "\" onclick=\"return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 480 } )\"><span><span>Book now</span></span> </a><a class=\"button\" href=\"Enquiry.aspx?Type=Hotel&ID=" + dt.Rows[i]["HotelKey"].ToString() + "\" onclick=\"return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 600 } )\"><span><span>Enquiry</span></span></a></div></li>";
+                "<a class=\"button\" href=\"Enquiry.aspx?Type=Hotel&ID=" + dt.Rows[i]["HotelKey"].ToString() + "\" onclick=\"return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 600 } )\"><span><span>Enquiry</span></span></a></div></li>";
             
           
 

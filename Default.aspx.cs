@@ -58,7 +58,19 @@ public partial class _Default : System.Web.UI.Page
             for (Int32 i = 0; i < dt.Rows.Count; i++)
             {
                 string HotelImage = "Hotel/" + dt.Rows[i]["HotelImage"].ToString();
-                HotelListContaint = HotelListContaint + "<li><a href=\"HotelDetail.aspx?HotelID=" + dt.Rows[i]["HotelKey"].ToString() + "\" title=\"" + dt.Rows[i]["HotelName"].ToString() + "\" ><img src=" + HotelImage + " alt=\"" + dt.Rows[i]["HotelName"].ToString() + "\" width=\"206\" height=\"120\" /></a><p><a href=\"HotelDetail.aspx?HotelID=" + dt.Rows[i]["HotelKey"].ToString() + "\" title=\"" + dt.Rows[i]["HotelName"].ToString() + "\" >" + dt.Rows[i]["HotelName"].ToString() + "</a><br />" + dt.Rows[i]["ShortDescription"].ToString() + "</p></li>";
+                string hotelDescription = dt.Rows[i]["ShortDescription"].ToString();
+
+                if (hotelDescription.Length > 70)
+                {
+                    int pos = hotelDescription.LastIndexOf(" ", 70);
+                    if (pos < 50)
+                    {
+                        pos = 70;
+                    }
+                    hotelDescription = hotelDescription.Substring(0, pos) + "...";
+                }
+
+                HotelListContaint = HotelListContaint + "<li><a href=\"HotelDetail.aspx?HotelID=" + dt.Rows[i]["HotelKey"].ToString() + "\" title=\"" + dt.Rows[i]["HotelName"].ToString() + "\" ><img src=" + HotelImage + " alt=\"" + dt.Rows[i]["HotelName"].ToString() + "\" width=\"206\" height=\"120\" /></a><p><a href=\"HotelDetail.aspx?HotelID=" + dt.Rows[i]["HotelKey"].ToString() + "\" title=\"" + dt.Rows[i]["HotelName"].ToString() + "\" >" + dt.Rows[i]["HotelName"].ToString() + "</a><br />" + hotelDescription + "</p></li>";
             }
             HotelList.InnerHtml = HotelListContaint;
         }
@@ -125,6 +137,7 @@ public partial class _Default : System.Web.UI.Page
 
         if (con.State == ConnectionState.Open ) con.Close();
     }
+    
     protected void LnkLogin_Click(object sender, EventArgs e)
     {
         base.Session.RemoveAll();

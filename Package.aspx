@@ -104,7 +104,7 @@ hs.fadeInOut = true;
        
    </div>
 <div style="float:right;text-align:right;">
-<a id="BookNow" runat="server"   class="button2" onclick="return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 480 } )">Book Now</a>
+<!--<a id="BookNow" runat="server"   class="button2" onclick="return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 480 } )">Book Now</a>-->
 <a id="Enquiry" runat="server"   class="button2" onclick="return hs.htmlExpand( this, { objectType: 'iframe', outlineType: 'glossy-dark', wrapperClassName: 'highslide-wrapper drag-header', outlineWhileAnimating: true, preserveContent: false, width: 630 } )">Enquiry</a>
 
 </div>

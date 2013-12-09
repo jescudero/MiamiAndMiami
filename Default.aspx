@@ -56,6 +56,7 @@ hs.fadeInOut = true;
 
             <p class="welcome-msg"><span id="welcome" runat="server" >Welcome to our Site!</span></p>
 
+            <!--
               <ul class="links"> 
                         <li class="first" ><asp:LinkButton ID="LinkButton1" runat="server" 
                                 onclick="LinkButton1_Click" ToolTip="Miami Home">My Account</asp:LinkButton></li> 
@@ -64,7 +65,7 @@ hs.fadeInOut = true;
                         <li id="reg" runat="server" ><a href="Register.aspx" title="Click To Register" >Register</a></li> 
                         <li class="last" ><asp:LinkButton ID="LnkLogin" runat="server" 
                                 onclick="LnkLogin_Click">Log In</asp:LinkButton></li> 
-            </ul> 
+            </ul> -->
         </div>
 
     </div>
@@ -85,9 +86,6 @@ hs.fadeInOut = true;
         <li> <a href="FunandLeisure" class="level-top"> <span>Fun & Leisure </span> </a> </li>
         -->
          <li> <a href="blog/"  class="level-top" target="_blank" > <span>Blog</span> </a> </li>
-     
-     
-        
     </ul>
     <div class="home_linkRight"></div>
 
@@ -241,6 +239,7 @@ hs.fadeInOut = true;
                     </div>
                 </div>
             </li>
+           <!--
 			 <div class="clear" style="height:10px"></div>
 			   <li class="item first">
                 <div class="grid_bg1">
@@ -254,6 +253,7 @@ hs.fadeInOut = true;
                     </div>
                 </div>
             </li>
+           
             <li class="item">
                 <div class="grid_bg1">
                     <div class="grid_bg2">
@@ -277,8 +277,8 @@ hs.fadeInOut = true;
                         </div>
                     </div>
                 </div>
-           </li>
-</ul>
+           </li>-->
+            </ul>
 
             </div></div>                    </div></div></div>
 
@@ -487,7 +487,7 @@ Submit Request</a>
                 <li ><a href="ContactUs" title="Contact Us">Contact Us </a></li> 
                 <li ><a href="HotelsPartner" title="Hotels Partner in Italy">Hotels Partner in Italy</a></li> 
                 <li ><a href="Birds" title="Bird's Nest vacation apartments">Bird's Nest vacation apartments</a></li> 
-         
+               <li><asp:LinkButton ID="LnkLoginBottom" runat="server" onclick="LnkLogin_Click">Log In</asp:LinkButton></li>
             </ul> 
         <div class="clear"></div>
 
